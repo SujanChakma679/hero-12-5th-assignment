@@ -22,12 +22,12 @@
   <body class="bg-[#F5FFF6]">
     <!-- nav bar -->
     <nav>
-      <div class="flex justify-between items-center px-8 py-4">
+      <div class="flex justify-between items-center md:px-8 md:py-4 p-2">
         <div class="left-div flex items-center gap-2">
           <div>
-            <img class="w-[50px] h-[50px]" src="./assets/logo.png" alt="" />
+            <img class="w-[30px] h-[30px] md:w-[50px] md:h-[50px]" src="./assets/logo.png" alt="" />
           </div>
-          <h2 class="font-bold text-[#006747]">
+          <h2 class="font-bold text-[10px] md:text-[16px] text-[#006747]">
             Emergency <br />
             Service
           </h2>
@@ -35,14 +35,14 @@
         <div class="right-div">
           <button class="btn bg-[#41FF6B1A] rounded-3xl font-semibold">
             <h1 id="heart">0</h1>
-            <img class="w-[30px] h-[30px]" src="./assets/heart.png" alt="" />
+            <img class="w-[20px] h-[20px] md:w-[30px] md:h-[30px]" src="./assets/heart.png" alt="" />
           </button>
           <button class="btn bg-[#41FF6B1A] rounded-3xl font-semibold">
-            <h1>100</h1>
-            <img class="w-[30px] h-[30px]" src="./assets/coin.png" alt="" />
+            <h1 id="coin">100</h1>
+            <img class="w-[20px] h-[20px] md:w-[30px] md:h-[30px]" src="./assets/coin.png" alt="" />
           </button>
           <button class="btn bg-[#00A63E] rounded-3xl text-white font-semibold">
-            <span>0</span><span>copy</span>
+            <span id="copy">0</span><span>copy</span>
           </button>
         </div>
       </div>
@@ -65,7 +65,7 @@
     </div>
 
     <!-- main section start -->
-    <div class="cart grid grid-cols-4 grid-rows-3 gap-4 p-8">
+    <div class="cart grid md:grid-cols-4 md:grid-rows-3 gap-4 p-8">
       <div class="cart-1 rounded-lg w-60px h-auto p-4 bg-[#FFFFFF] shadow-[0px_2px_3px_0px_#00000026]">
         <div class="nav-bar flex justify-between">
           <div class="h-[32px] w-[32px]">
@@ -80,10 +80,10 @@
           All
         </button>
         <div class="mt-4">
-          <button class="btn rounded-lg font-semibold text-gray-400 w-[100px] mr-2">
+          <button class="btn rounded-lg font-semibold text-gray-400 w-[100px] mr-2 copy-btn">
             <i class="fa-regular fa-copy"></i>Copy
           </button>
-          <button
+          <button id="call-btn1"
             class="btn bg-[#00A63E] rounded-lg font-semibold text-white w-[100px]"
           >
             <i class="fa-solid fa-phone"></i>Call
@@ -104,10 +104,10 @@
           Police
         </button>
         <div class="mt-4">
-          <button class="btn rounded-lg font-semibold text-gray-400 w-[100px] mr-2">
+          <button class="btn rounded-lg font-semibold text-gray-400 w-[100px] mr-2 copy-btn">
             <i class="fa-regular fa-copy"></i>Copy
           </button>
-          <button
+          <button id="call-btn2"
             class="btn bg-[#00A63E] rounded-lg font-semibold text-white w-[100px]"
           >
             <i class="fa-solid fa-phone"></i>Call
@@ -128,25 +128,31 @@
           Fire
         </button>
         <div class="mt-4">
-          <button class="btn rounded-lg font-semibold text-gray-400 w-[100px] mr-2">
+          <button class="btn rounded-lg font-semibold text-gray-400 w-[100px] mr-2 copy-btn">
             <i class="fa-regular fa-copy"></i>Copy
           </button>
           <button
-            class="btn bg-[#00A63E] rounded-lg font-semibold text-white w-[100px]"
+            class="btn bg-[#00A63E] rounded-lg font-semibold text-white w-[100px] call-btn"
           >
             <i class="fa-solid fa-phone"></i>Call
           </button>
         </div>
       </div>
-      <div class="cart-4 rounded-lg w-60px h-auto p-4 bg-[#FFFFFF] shadow-[0px_2px_3px_0px_#00000026] row-span-3">
+      <div class="cart-4 rounded-lg w-60px h-auto p-4 bg-[#FFFFFF] shadow-[0px_2px_3px_0px_#00000026] md:row-span-3 order-last md:order-none">
         <div class="flex justify-between">
-          <p><i class="fa-regular fa-clock pr-1"></i>Call History</p>
+          <p id="call-history"><i class="fa-regular fa-clock pr-1"></i>Call History</p>
           
-          <button class="btn bg-[#00A63E] rounded-3xl text-white font-semibold">
+          <button id="clear-btn" class="btn bg-[#00A63E] rounded-3xl text-white font-semibold">
             Clear
           </button>
         </div>
+         
+       <div id="history-container">
+          
+       </div>
+
       </div>
+
       <div class="cart-5 rounded-lg w-60px h-auto p-4 bg-[#FFFFFF] shadow-[0px_2px_3px_0px_#00000026]">
         <div class="nav-bar flex justify-between">
           <div class="h-[32px] w-[32px]">
@@ -161,11 +167,11 @@
           Health
         </button>
         <div class="mt-4">
-          <button class="btn rounded-lg font-semibold text-gray-400 w-[100px] mr-2">
+          <button class="btn rounded-lg font-semibold text-gray-400 w-[100px] mr-2 copy-btn">
             <i class="fa-regular fa-copy"></i>Copy
           </button>
           <button
-            class="btn bg-[#00A63E] rounded-lg font-semibold text-white w-[100px]"
+            class="btn bg-[#00A63E] rounded-lg font-semibold text-white w-[100px] call-btn"
           >
             <i class="fa-solid fa-phone"></i>Call
           </button>
@@ -185,11 +191,11 @@
           Help
         </button>
         <div class="mt-4">
-          <button class="btn rounded-lg font-semibold text-gray-400 w-[100px] mr-2">
+          <button class="btn rounded-lg font-semibold text-gray-400 w-[100px] mr-2 copy-btn">
             <i class="fa-regular fa-copy"></i>Copy
           </button>
           <button
-            class="btn bg-[#00A63E] rounded-lg font-semibold text-white w-[100px]"
+            class="btn bg-[#00A63E] rounded-lg font-semibold text-white w-[100px] call-btn"
           >
             <i class="fa-solid fa-phone"></i>Call
           </button>
@@ -209,11 +215,11 @@
           Govt.
         </button>
         <div class="mt-4">
-          <button class="btn rounded-lg font-semibold text-gray-400 w-[100px] mr-2">
+          <button class="btn rounded-lg font-semibold text-gray-400 w-[100px] mr-2 copy-btn">
             <i class="fa-regular fa-copy"></i>Copy
           </button>
           <button
-            class="btn bg-[#00A63E] rounded-lg font-semibold text-white w-[100px]"
+            class="btn bg-[#00A63E] rounded-lg font-semibold text-white w-[100px] call-btn"
           >
             <i class="fa-solid fa-phone"></i>Call
           </button>
@@ -233,11 +239,11 @@
           Govt.
         </button>
         <div class="mt-4">
-          <button class="btn rounded-lg font-semibold text-gray-400 w-[100px] mr-2">
+          <button class="btn rounded-lg font-semibold text-gray-400 w-[100px] mr-2 copy-btn">
             <i class="fa-regular fa-copy"></i>Copy
           </button>
           <button
-            class="btn bg-[#00A63E] rounded-lg font-semibold text-white w-[100px]"
+            class="btn bg-[#00A63E] rounded-lg font-semibold text-white w-[100px] call-btn"
           >
             <i class="fa-solid fa-phone"></i>Call
           </button>
@@ -257,11 +263,11 @@
           NGO
         </button>
         <div class="mt-4">
-          <button class="btn rounded-lg font-semibold text-gray-400 w-[100px] mr-2">
+          <button class="btn rounded-lg font-semibold text-gray-400 w-[100px] mr-2 copy-btn">
             <i class="fa-regular fa-copy"></i>Copy
           </button>
           <button
-            class="btn bg-[#00A63E] rounded-lg font-semibold text-white w-[100px]"
+            class="btn bg-[#00A63E] rounded-lg font-semibold text-white w-[100px] call-btn"
           >
             <i class="fa-solid fa-phone"></i>Call
           </button>
@@ -281,11 +287,11 @@
           Travel
         </button>
         <div class="mt-4">
-          <button class="btn rounded-lg font-semibold text-gray-400 w-[100px] mr-2">
+          <button class="btn rounded-lg font-semibold text-gray-400 w-[100px] mr-2 copy-btn">
             <i class="fa-regular fa-copy"></i>Copy
           </button>
           <button
-            class="btn bg-[#00A63E] rounded-lg font-semibold text-white w-[100px]"
+            class="btn bg-[#00A63E] rounded-lg font-semibold text-white w-[100px] call-btn"
           >
             <i class="fa-solid fa-phone"></i>Call
           </button>
@@ -294,7 +300,11 @@
       
     </div>
 
+    
+   
+    
 
-    <script src="./heart.js"></script>
+    <script src="./script.js"></script>
+    <script src="./script2.js"></script>
   </body>
 </html>
