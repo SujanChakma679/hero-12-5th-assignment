@@ -1,7 +1,7 @@
    
   
-  //button 2
-document.getElementById('call-btn2')
+  //button 4
+document.getElementById('call-btn4')
   .addEventListener('click', function(event) {
     event.preventDefault();
 
@@ -14,13 +14,13 @@ document.getElementById('call-btn2')
     } else {
       const coinCount = coin - 20;
       document.getElementById('coin').innerText = coinCount;
-      alert('Calling police helpline 999');
+      alert('Calling Ambulance 1994-999999');
     }
 
     // save call info
     const callList = {
-      name: 'Police Helpline',
-      num: 999, 
+      name: 'Ambulance',
+      num:'1994-999999', 
       time: new Date().toLocaleTimeString() 
     };
 
@@ -44,4 +44,4 @@ document.getElementById('call-btn2')
     `;
 
     historyContainer.appendChild(div);
-})
+});

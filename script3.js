@@ -1,7 +1,7 @@
    
   
-  //button 2
-document.getElementById('call-btn2')
+  //button 3
+document.getElementById('call-btn3')
   .addEventListener('click', function(event) {
     event.preventDefault();
 
@@ -14,12 +14,12 @@ document.getElementById('call-btn2')
     } else {
       const coinCount = coin - 20;
       document.getElementById('coin').innerText = coinCount;
-      alert('Calling police helpline 999');
+      alert('Calling Fire Service 999');
     }
 
     // save call info
     const callList = {
-      name: 'Police Helpline',
+      name: 'Fire Service',
       num: 999, 
       time: new Date().toLocaleTimeString() 
     };

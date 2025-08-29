@@ -1,7 +1,7 @@
    
   
-  //button 2
-document.getElementById('call-btn2')
+  //button 6
+document.getElementById('call-btn6')
   .addEventListener('click', function(event) {
     event.preventDefault();
 
@@ -14,13 +14,13 @@ document.getElementById('call-btn2')
     } else {
       const coinCount = coin - 20;
       document.getElementById('coin').innerText = coinCount;
-      alert('Calling police helpline 999');
+      alert('Calling Anti-corruption Helpline 106');
     }
 
     // save call info
     const callList = {
-      name: 'Police Helpline',
-      num: 999, 
+      name: 'Anti-corruption',
+      num:'106', 
       time: new Date().toLocaleTimeString() 
     };
 
@@ -44,4 +44,4 @@ document.getElementById('call-btn2')
     `;
 
     historyContainer.appendChild(div);
-})
+});

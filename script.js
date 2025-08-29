@@ -33,6 +33,25 @@ document.querySelectorAll('.copy-btn').forEach(button => {
   });
 });
 
+// Select all copy buttons
+const copyButtons = document.querySelectorAll('.copy-btn');
+
+copyButtons.forEach(button => {
+  button.addEventListener('click', function() {
+    // Get the parent card dynamically
+    const cart = button.closest('.cart'); // works for all cards
+
+    // Get the h3 number inside this card
+    const number = cart.querySelector('h3').innerText;
+
+    // Copy to clipboard
+    navigator.clipboard.writeText(number)
+      .then(() => alert(`Number ${number} copied!`))
+      .catch(err => console.error('Failed to copy:', err));
+  });
+});
+
+
 
 //call button function
 
